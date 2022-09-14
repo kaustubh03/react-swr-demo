@@ -9,7 +9,7 @@ export default function App() {
   
   const { data, error, mutate, size, setSize, isValidating } = useSWRInfinite(
     (index) =>
-      `https://api.unsplash.com/photos?client_id=ahCJUngSkj9fl0XkTUI3blpd31gMkexP1jRRjt_opSw&per_page=${PAGE_SIZE}&page=${
+      `https://api.unsplash.com/photos?client_id=${YOUR_UNSPLASH_KEY}&per_page=${PAGE_SIZE}&page=${
         index + 1
       }`,
     fetcher
